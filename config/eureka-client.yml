@@ -1,0 +1,31 @@
+eureka:
+  heartbeatInterval: 30000
+  registryFetchInterval: 30000
+  enabled: true
+  host: 'admin:admin@192.168.1.113'
+  port: 8761
+  servicePath: '/eureka/apps/'
+  
+instance: {
+    instanceId: 'thomas-service:1dfsa234edsted786aereds247',
+    app: 'thomas-service',
+    hostName: '192.168.1.117',
+    ipAddr: '192.168.1.117',
+    port: {
+      '$': 3000,
+      '@enabled': 'true'
+    },
+    vipAddress: 'thomas-service',
+    statusPageUrl: 'http://192.168.1.117:3000/info',
+    healthCheckUrl: 'http://192.168.1.117:3000/health',
+    homePageUrl: 'http://192.168.1.117:3000/',
+    dataCenterInfo: {
+      '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
+      name: 'MyOwn'
+    },
+    metadata: {
+      zone: 'primary',
+      profile: 'dev',
+      version: '0.0.1'
+    }
+}
